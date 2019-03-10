@@ -21,7 +21,7 @@ recommended to compile the software from source on the target system.
 A precompiled binary is available for recent Linux systems and may be
 downloaded for immediate use:
 
-    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz
+    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.24/diamond-linux64.tar.gz
     tar xzf diamond-linux64.tar.gz
 
 The binary requires a fairly current CPU that supports POPCNT and SSSE3.
