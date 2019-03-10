@@ -21,9 +21,8 @@ recommended to compile the software from source on the target system.
 A precompiled binary is available for recent Linux systems and may be
 downloaded for immediate use:
 
-> `wget
-> http://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz`
-> `tar xzf diamond-linux64.tar.gz`
+    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz
+    tar xzf diamond-linux64.tar.gz
 
 The binary requires a fairly current CPU that supports POPCNT and SSSE3.
 If the binary does not work on your system, i.e. you are getting error
@@ -35,21 +34,21 @@ another installation method or compile the software from source.
 Install [Bioconda](https://bioconda.github.io/) on your system if not
 already present, then install DIAMOND using this shell command:
 
-> `conda install -c bioconda diamond`
+    conda install -c bioconda diamond
 
 Regularly updating to the latest version is also recommended:
 
-> `conda update diamond`
+    conda update diamond
 
 ### Linux (via Docker)
 
 To pull the latest version of the official Docker container:
 
-> `docker pull buchfink/diamond`
+    docker pull buchfink/diamond
 
 To pull a specific version:
 
-> `docker pull buchfink/diamond:version0.9.22`
+    docker pull buchfink/diamond:version0.9.22
 
 ### FreeBSD
 
@@ -63,13 +62,17 @@ Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 ## Compiling from source
 
-Compilation requires GCC 4.1 or later, CMake 2.6 or later as well as
-libpthread and zlib including development headers. To compile DIAMOND
+Compilation requires GCC 4.8.1 or later, CMake 2.6 or later as well as
+`libpthread` and `zlib` including development headers. To compile DIAMOND
 from source, invoke the following commands on the shell:
 
-> `wget http://github.com/bbuchfink/diamond/archive/v0.9.22.tar.gz tar
-> xzf v0.9.22.tar.gz cd diamond-0.9.22 mkdir bin cd bin cmake .. make
-> install`
+    wget http://github.com/bbuchfink/diamond/archive/v0.9.24.tar.gz
+    tar xzf v0.9.24.tar.gz
+    cd diamond-0.9.24
+    mkdir bin
+    cd bin
+    cmake ..
+    make install
 
 Note:
 
