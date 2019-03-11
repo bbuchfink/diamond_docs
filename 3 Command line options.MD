@@ -52,7 +52,7 @@ the task to be run by the program.
     Path to mapping file that maps NCBI protein accession numbers to
     taxon ids (gzip compressed). This parameter is optional and needs to
     be supplied in order to provide taxonomy features. The file can be
-    downloaded from NCBI: [ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz).
+    downloaded from NCBI: <ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz>.
 
   - `--taxonnodes <file>`  
       
@@ -63,32 +63,32 @@ the task to be run by the program.
 
 ## General options
 
-  - `–threads/-p #`  
+  - `--threads/-p #`  
       
     Number of CPU threads. By default, the program will auto-detect and
     use all available virtual cores on the machine.
 
 ## Input options
 
-  - `–db/-d <file>`  
+  - `--db/-d <file>`  
       
     Path to the DIAMOND database file.
 
-  - `–query/-q <file>`  
+  - `--query/-q <file>`  
       
     Path to the query input file in FASTA or FASTQ format (may be gzip
     compressed). If this parameter is omitted, the input will be read
     from `stdin`.
 
-  - `–taxonlist <list>`  
+  - `--taxonlist <list>`  
       
     Comma-separated list of NCBI taxonomic IDs to filter the database
     by. Any taxonomic rank can be used, and only reference sequences
     matching one of the specified taxon ids will be searched against.
-    Using this option requires setting the `–taxonmap` and `–taxonnodes`
+    Using this option requires setting the `--taxonmap` and `--taxonnodes`
     parameters for `makedb`.
 
-  - `–query-gencode #`  
+  - `--query-gencode #`  
       
     Genetic code used for translation of query in BLASTX mode. A list of
     possible values can be found at the [NCBI
@@ -96,12 +96,12 @@ the task to be run by the program.
     By default, the Standard Code is used. Note: changing the genetic
     code is currently not fully supported for the DAA format.
 
-  - `–strand {both, plus, minus}`  
+  - `--strand {both, plus, minus}`  
       
     Set strand of query to align for translated searches. By default
     both strands are searched.
 
-  - `–min-orf/-l #`  
+  - `--min-orf/-l #`  
       
     Ignore translated sequences that do not contain an open reading
     frame of at least this length. By default this feature is disabled
