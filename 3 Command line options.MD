@@ -37,25 +37,24 @@ the task to be run by the program.
 
 ## Makedb options
 
-  - `–in <file>`  
+  - `--in <file>`  
       
     Path to the input protein reference database file in FASTA format
     (may be gzip compressed). If this parameter is omitted, the input
     will be read from `stdin`.
 
-  - `–db/-d <file>`  
+  - `--db/-d <file>`  
       
     Path to the output DIAMOND database file.
 
-  - `–taxonmap <file>`  
+  - `--taxonmap <file>`  
       
     Path to mapping file that maps NCBI protein accession numbers to
     taxon ids (gzip compressed). This parameter is optional and needs to
     be supplied in order to provide taxonomy features. The file can be
-    downloaded from NCBI:
-    <ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz>.
+    downloaded from NCBI: [ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz).
 
-  - `–taxonnodes <file>`  
+  - `--taxonnodes <file>`  
       
     Path to the `nodes.dmp` file from the NCBI taxonomy. This parameter
     is optional and needs to be supplied in order to provide taxonomy
