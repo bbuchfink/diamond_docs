@@ -429,7 +429,7 @@ the task to be run by the program.
 
 ## Memory & performance options
 
-  - `–block-size/-b #`  
+  - `--block-size/-b #`  
       
     Block size in billions of sequence letters to be processed at a
     time. This is the main parameter for controlling the program’s
@@ -439,7 +439,7 @@ the task to be run by the program.
     So for the default value of `-b2.0`, the memory usage will be about
     12 GB.
 
-  - `–tmpdir/-t <directory>`  
+  - `--tmpdir/-t <directory>`  
       
     Directory to be used for temporary storage. This is set to the
     output directory by default. The amount of disk space that will be
@@ -447,11 +447,11 @@ the task to be run by the program.
     rule you should ensure that 100 GB of disk space are available here.
     If you run the program in a cluster environment, and disk space is
     only available over a slow network based file system, you may want
-    to set the `–tmpdir` option to `/dev/shm`. This will keep temporary
+    to set the `--tmpdir` option to `/dev/shm`. This will keep temporary
     information in memory and thus increase the program’s memory usage
     substantially.
 
-  - `–index-chunks/-c #`  
+  - `--index-chunks/-c #`  
       
     The number of chunks for processing the seed index (default=4). This
     option can be additionally used to tune the performance. It is
@@ -461,23 +461,23 @@ the task to be run by the program.
 
 ## View options
 
-  - `–daa/-a <file>`  
+  - `--daa/-a <file>`  
       
     Path to input file in DAA format.
 
-  - `–out/-o <file>`  
+  - `--out/-o <file>`  
       
     Path to output file. If this parameter is omitted, the results will
     be written to the standard output and all other program output will
     be suppressed.
 
 These aligner parameters apply to the view command as well and work in
-the same way: `–outfmt`, `–compress`, `–max-target-seqs`, `–top`. Note
+the same way: `--outfmt`, `--compress`, `--max-target-seqs`, `--top`. Note
 that taxonomy features are currently not available for the DAA format.
 
 ## Advanced options
 
-  - `–freq-sd #`  
+  - `--freq-sd #`  
       
     During the seed search, seeds with very high frequency in the
     queries or the database are ignored. This option sets the number of
@@ -485,16 +485,16 @@ that taxonomy features are currently not available for the DAA format.
     The default values are 50 in default mode, 10 in sensitive mode, and
     200 in more-sensitive mode.
 
-  - `–band #`  
+  - `--band #`  
       
     Dynamic programming band for seed extension. Initial seed hits are
     scanned across a band of this length in both directions.
 
-  - `–xml-blord-format`  
+  - `--xml-blord-format`  
       
     Use gnlBL\_ORD\_ID style format for hit IDs in XML output.
 
-  - `–range-cover #`  
+  - `--range-cover #`  
       
     The percentage of a hit’s query range that needs to be spanned by
     higher scoring hits for a hit to be deleted in range culling mode
