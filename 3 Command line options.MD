@@ -184,13 +184,13 @@ the task to be run by the program.
 
 ## Output options
 
-  - `–out/-o <file>`  
+  - `--out/-o <file>`  
       
     Path to the output file. If this parameter is omitted, the results
     will be written to the standard output and all other program output
     will be suppressed.
 
-  - `–outfmt/-f #`  
+  - `--outfmt/-f #`  
       
     Format of the output file. The following values are accepted:
     
@@ -205,96 +205,96 @@ the task to be run by the program.
         the `6` may be followed by a space-separated list of the
         following keywords, each specifying a field of the output.
         
-          - qseqid  
+          - `qseqid`
             Query Seq - id
         
-          - qlen  
+          - `qlen`
             Query sequence length
         
-          - sseqid  
+          - `sseqid`
             Subject Seq - id
         
-          - sallseqid  
+          - `sallseqid`
             All subject Seq - id(s), separated by a ’;’
         
-          - slen  
+          - `slen`
             Subject sequence length
         
-          - qstart  
+          - `qstart`
             Start of alignment in query
         
-          - qend  
+          - `qend`
             End of alignment in query
         
-          - sstart  
+          - `sstart`
             Start of alignment in subject
         
-          - send  
+          - `send`
             End of alignment in subject
         
-          - qseq  
+          - `qseq`
             Aligned part of query sequence
         
-          - sseq  
+          - `sseq`
             Aligned part of subject sequence
         
-          - full\_sseq  
+          - `full_sseq`
             Full subject sequence
         
-          - evalue  
+          - `evalue`
             Expect value
         
-          - bitscore  
+          - `bitscore`
             Bit score
         
-          - score  
+          - `score`
             Raw score
         
-          - length  
+          - `length`
             Alignment length
         
-          - pident  
+          - `pident`
             Percentage of identical matches
         
-          - nident  
+          - `nident`
             Number of identical matches
         
-          - mismatch  
+          - `mismatch`
             Number of mismatches
         
-          - positive  
+          - `positive`
             Number of positive - scoring matches
         
-          - gapopen  
+          - `gapopen`
             Number of gap openings
         
-          - gaps  
+          - `gaps`
             Total number of gaps
         
-          - ppos  
+          - `ppos`
             Percentage of positive - scoring matches
         
-          - qframe  
+          - `qframe`
             Query frame
         
-          - btop  
+          - `btop`
             Blast traceback operations(BTOP)
         
-          - staxids  
+          - `staxids`
             Unique Subject Taxonomy ID(s), separated by a ’;’ (in
             numerical order). This field requires setting the
-            `–taxonmap` parameter for `makedb`.
+            `--taxonmap` parameter for `makedb`.
         
-          - stitle  
+          - `stitle`
             Subject Title
         
-          - salltitles  
+          - `salltitles`
             All Subject Title(s), separated by a ’\<\>’
         
-          - qcovhsp  
+          - `qcovhsp`
             Query Coverage Per HSP
         
-          - qtitle  
+          - `qtitle`
             Query title
         
         By default, there are 12 preconfigured fields: `qseqid sseqid
@@ -322,52 +322,52 @@ the task to be run by the program.
         3.  E-value of the best alignment with a known taxonomic ID
             found for the query (0 if unclassified)
         
-        The score range for the LCA algorithm is set by the `–top`
+        The score range for the LCA algorithm is set by the `--top`
         parameter. The default value is 10 which means that all
         alignments whose score is at most 10% lower than the best score
         are considered for the LCA computation.
         
-        Using this format requires setting the `–taxonmap` and
-        `–taxonnodes` parameters for `makedb`.
+        Using this format requires setting the `--taxonmap` and
+        `--taxonnodes` parameters for `makedb`.
     
       - `103`  
-        [PAF](https://github.com/lh3/miniasm/blob/master/PAF.md) format.
+        [PAF format](https://github.com/lh3/miniasm/blob/master/PAF.md).
         The custom fields in the format are AS (bit score), ZR (raw
         score) and ZE (e-value).
 
-  - `–salltitles`  
+  - `--salltitles`  
       
     Include full length subject titles into the DAA format. By default,
     DAA files contain only the shortened sequence id (up to the first
     blank character).
 
-  - `–sallseqid`  
+  - `--sallseqid`  
       
     Include all subject ids into the DAA file. By default only the first
     id of each subject is included. As the subject ids are much shorter
     than the full titles this option will save space compared to the
-    `–salltitles` option.
+    `--salltitles` option.
 
-  - `–compress (0,1)`  
+  - `--compress (0,1)`  
       
     Enable compression of the output file. 0 (default) means no
     compression, 1 means gzip compression.
 
-  - `–max-target-seqs/-k #`  
+  - `--max-target-seqs/-k #`  
       
     The maximum number of target sequences per query to report
     alignments for (default=25). Setting this to 0 will report all
     alignments that were found.
 
-  - `–top #`  
+  - `--top #`  
       
     Report alignments within the given percentage range of the top
-    alignment score for a query (overrides `–max-target-seqs` option).
+    alignment score for a query (overrides `--max-target-seqs` option).
     For example, setting this to 10 will report all alignments whose
     score is at most 10% lower than the best alignment score for a
     query.
 
-  - `–range-culling`  
+  - `--range-culling`  
       
     Restrict hit culling to overlapping query ranges. This feature is
     designed for long query DNA sequences that may span several genes.
@@ -378,35 +378,35 @@ the task to be run by the program.
     Using this feature along with `-k 25` (default), a hit will only be
     deleted if at least 50% of its query range is spanned by at least 25
     higher or equal scoring hits.  
-    Using this feature along with `–top 10`, a hit will only be deleted
+    Using this feature along with `--top 10`, a hit will only be deleted
     if its score is more than 10% lower than that of a higher scoring
     hit over at least 50% of its query range.  
-    The percentage is configurable using `–range-cover`. Note that this
+    The percentage is configurable using `--range-cover`. Note that this
     feature is currently only available in frameshift alignment mode.
 
-  - `–evalue/-e #`  
+  - `--evalue/-e #`  
       
     Maximum expected value to report an alignment (default=0.001).
 
-  - `–min-score #`  
+  - `--min-score #`  
       
     Minimum bit score to report an alignment. Setting this option will
-    override the `–evalue` parameter.
+    override the `--evalue` parameter.
 
-  - `–id #`  
+  - `--id #`  
       
     Report only alignments above the given percentage of sequence
     identity.
 
-  - `–query-cover #`  
+  - `--query-cover #`  
       
     Report only alignments above the given percentage of query cover.
 
-  - `–subject-cover #`  
+  - `--subject-cover #`  
       
     Report only alignments above the given percentage of subject cover.
 
-  - `–max-hsps #`  
+  - `--max-hsps #`  
       
     The maximum number of HSPs per subject sequence to report for each
     query. Note that in general any number of HSPs may exist for a
@@ -417,13 +417,13 @@ the task to be run by the program.
     Setting this option to 1 will cause only the single best HSP for
     each query/subject pair to be reported.
 
-  - `–unal (0,1)`  
+  - `--unal (0,1)`  
       
     Report unaligned queries (0=no, 1=yes). By default, unaligned
     queries are reported for the BLAST pairwise, BLAST XML and SAM
     format.
 
-  - `–no-self-hits`  
+  - `--no-self-hits`  
       
     Suppress reporting of identical self-hits between sequences.
 
