@@ -111,19 +111,19 @@ the task to be run by the program.
 
 ## Alignment options
 
-  - `–sensitive`  
+  - `--sensitive`  
       
     This mode is a lot more sensitive that the default and generally
     recommended for aligning longer sequences. The default mode is
     mainly designed for short read alignment, i.e. finding significant
     matches of \>50 bits on 30-40aa fragments.
 
-  - `–more-sensitive`  
+  - `--more-sensitive`  
       
     This mode provides some additional sensitivity compared to the
     sensitive mode.
 
-  - `–frameshift/-F #`  
+  - `--frameshift/-F #`  
       
     Penalty for frameshifts in DNA-vs-protein alignments. Values around
     15 are reasonable for this parameter. Enabling this feature will
@@ -134,15 +134,15 @@ the task to be run by the program.
     translation respectively.  
     Note that this feature is disabled by default.
 
-  - `–gapopen #`  
+  - `--gapopen #`  
       
     Gap open penalty.
 
-  - `–gapextend #`  
+  - `--gapextend #`  
       
     Gap extension penalty.
 
-  - `–matrix <matrix name>`  
+  - `--matrix <matrix name>`  
       
     Scoring matrix. The following matrices are supported, with the
     default being
@@ -161,15 +161,15 @@ the task to be run by the program.
     | PAM30    | (5-7)/2; (8-10)/1                            | 9/1                   |
     
 
-  - `–comp-based-stats (0,1)`  
+  - `--comp-based-stats (0,1)`  
       
     Compositional bias correction of alignment scores. 0 means no score
     correction, 1 means compositional bias correction as described in 
-    (default). Compositionally biased sequences often cause false
+    [1]. Compositionally biased sequences often cause false
     positive matches, which are effectively filtered by this algorithm
     in a way similar to the composition based statistics used by BLAST .
 
-  - `–algo (0,1)`  
+  - `--algo (0,1)`  
       
     Algorithm for seed search. 0 means double-indexed and 1 means
     query-indexed. The double-indexed algorithm is the program’s main
@@ -499,3 +499,7 @@ that taxonomy features are currently not available for the DAA format.
     The percentage of a hit’s query range that needs to be spanned by
     higher scoring hits for a hit to be deleted in range culling mode
     (default=50.0).
+    
+---
+
+[1] Maria Hauser, Martin Steinegger, Johannes Söding; MMseqs software suite for fast and deep clustering and searching of large protein sequence sets, Bioinformatics, Volume 32, Issue 9, 1 May 2016, Pages 1323–1330
