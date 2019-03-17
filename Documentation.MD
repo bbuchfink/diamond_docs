@@ -82,3 +82,5 @@ Publication:
 -   Buchfink B, Xie C, Huson DH, \"Fast and sensitive protein alignment
     using DIAMOND\", *Nature Methods* **12**, 59-60 (2015).
     [doi:10.1038/nmeth.3176](https://doi.org/10.1038/nmeth.3176)
+    
+*This documentation is written in Markdown. If you need an offline copy or want to contribute, please see here: https://github.com/bbuchfink/diamond_docs*
