@@ -56,7 +56,7 @@ The output file here is specified with the `–o` option and named
 
 -   The program may use quite a lot of memory and also temporary
     disk space. Should the program fail due to running out of either
-    one, you need to set a lower value for the [block size parameter](../command_line_options/)
+    one, you need to set a lower value for the [block size parameter](index.php?pages/command_line_options/)
     `-b` (see [3.7](#subsec:memory)).
 -   You can adjust the sensitivity using the options `--sensitive` or
     `--more-sensitive`.
