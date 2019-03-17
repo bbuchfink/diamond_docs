@@ -74,7 +74,7 @@ Community feedback and feature requests are also appreciated.
         behaviour can be adjusted using the `--freq-sd` option.
     
     5.  The program may not be sensitive enough for your application.
-        You should try the more sensitive modes (options `–sensitive`
+        You should try the more sensitive modes (options `--sensitive`
         and `--more-sensitive`). Still, perfect results cannot be
         guaranteed by heuristical algorithms, but only by a rigorous
         Smith-Waterman computation.
