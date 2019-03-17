@@ -20,7 +20,7 @@ Community feedback and feature requests are also appreciated.
     will build a database from all `fasta.gz` files in the current
     directory:
     
-    > `zcat *.fasta.gz | diamond makedb -d diamond_db`
+        zcat *.fasta.gz | diamond makedb -d diamond_db
 
 2.  **The program runs for a very long time and the output file remains
     empty.**
@@ -43,7 +43,7 @@ Community feedback and feature requests are also appreciated.
     a linear alignment, any number of these may be contained in a single
     query/subject pair. The program reports additional aligned domains
     by default as they may contain valuable information. This behaviour
-    can be changed by using the `–max-hsps` option.
+    can be changed by using the `--max-hsps` option.
 
 5.  **The program does not appear to be sensitive enough / it does not
     find an alignment I expect it to find or that another aligner
@@ -71,11 +71,11 @@ Community feedback and feature requests are also appreciated.
     
     4.  Seeds that occur too frequently in the input are ignored, which
         may cause problems if your data is extremely repetitive. This
-        behaviour can be adjusted using the `–freq-sd` option.
+        behaviour can be adjusted using the `--freq-sd` option.
     
     5.  The program may not be sensitive enough for your application.
         You should try the more sensitive modes (options `–sensitive`
-        and `–more-sensitive`). Still, perfect results cannot be
+        and `--more-sensitive`). Still, perfect results cannot be
         guaranteed by heuristical algorithms, but only by a rigorous
         Smith-Waterman computation.
 
@@ -83,8 +83,8 @@ Community feedback and feature requests are also appreciated.
     
     The task may have been killed by the system for running out of
     memory. Use `dmesg` to check for a respective kernel message. See
-    [3.7](#subsec:memory) for instructions on memory usage. If you run
-    the program on a cluster, you may need to allocate more memory to
+    [instructions on memory usage](index.php?pages/command_line_options/#memory-performance-options).
+    If you run the program on a cluster, you may need to allocate more memory to
     the task.
 
 7.  **Are results consistent for multiple calls of the program?**
@@ -103,7 +103,7 @@ Community feedback and feature requests are also appreciated.
     subject sequences that were hit for a query based on ungapped
     extensions at seed hits and considers only a subset of the subjects
     for gapped extension. The pool of subjects considered is bigger for
-    higher values of `-max_target_seqs`, so in rare cases the true best
+    higher values of `--max_target_seqs`, so in rare cases the true best
     hit may or may not make it to the gapped extension stage depending
     on this parameter.
     
