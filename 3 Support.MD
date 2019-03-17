@@ -103,7 +103,7 @@ Community feedback and feature requests are also appreciated.
     subject sequences that were hit for a query based on ungapped
     extensions at seed hits and considers only a subset of the subjects
     for gapped extension. The pool of subjects considered is bigger for
-    higher values of `--max_target_seqs`, so in rare cases the true best
+    higher values of `-max_target_seqs`, so in rare cases the true best
     hit may or may not make it to the gapped extension stage depending
     on this parameter.
     
