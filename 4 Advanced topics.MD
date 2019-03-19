@@ -24,3 +24,33 @@ optimize the use of system resources. Some points to consider:
 
   - Use the option `--compress 1` to automatically generate
     gzip-compressed output files.
+    
+# Compiling with custom GCC
+
+Download and compile GCC:
+```
+cd
+wget ftp://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
+tar xzf gcc-4.8.5.tar.gz
+cd gcc-4.8.5
+./contrib/download_prerequisites
+cd ..
+mkdir objdir
+cd objdir
+$PWD/../gcc-4.8.5/configure --prefix=$HOME/GCC-4.8.5 --disable-multilib --disable-bootstrap --enable-languages=c++
+make -j 4
+make install
+```
+
+Download and compile Diamond:
+```
+cd
+git clone https://github.com/bbuchfink/diamond.git
+cd diamond
+mkdir bin
+cd bin
+export CC=$HOME/GCC-4.8.5/bin/gcc
+export CXX=$HOME/GCC-4.8.5/bin/g++
+cmake -DSTATIC_LIBGCC=ON -DSTATIC_LIBSTDC++=ON ..
+make
+```
