@@ -18,7 +18,6 @@ Keep posted about new developments by following me on
 
 [![Build Status](https://travis-ci.org/bbuchfink/diamond.svg?branch=master)](https://travis-ci.org/bbuchfink/diamond)
 [![image](https://anaconda.org/bioconda/diamond/badges/version.svg)](https://anaconda.org/bioconda/diamond)
-![image](https://anaconda.org/bioconda/diamond/badges/platforms.svg)
 [![image](https://anaconda.org/bioconda/diamond/badges/downloads.svg)](https://anaconda.org/bioconda/diamond)
 
 Quick start guide
@@ -65,6 +64,11 @@ The output file here is specified with the `–o` option and named
     (\> 1 million sequences) than for smaller ones.
 -   Low complexity masking is applied to the query and reference
     sequences by default. Masked residues appear in the output as X.
+    
+Documentation
+=============
+The online documentation is located at <http://www.diamondsearch.org>. For the markdown source code and an offline, text-based documentation, see: <https://github.com/bbuchfink/diamond_docs>.
+
 
 About
 =====
@@ -82,5 +86,3 @@ Publication:
 -   Buchfink B, Xie C, Huson DH, \"Fast and sensitive protein alignment
     using DIAMOND\", *Nature Methods* **12**, 59-60 (2015).
     [doi:10.1038/nmeth.3176](https://doi.org/10.1038/nmeth.3176)
-    
-*This documentation is written in Markdown. If you need an offline copy or want to contribute, please see here: <https://github.com/bbuchfink/diamond_docs>*
