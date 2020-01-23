@@ -62,8 +62,8 @@ The output file here is specified with the `–o` option and named
 -   The runtime of the program is not linear in the size of the
     query file and it is much more efficient for large query files
     (\> 1 million sequences) than for smaller ones.
--   Low complexity masking is applied to the query and reference
-    sequences by default. Masked residues appear in the output as X.
+-   Repeat masking is applied to the query and reference
+    sequences by default. Masked residues appear in the output as `X`.
     
 Documentation
 =============
@@ -73,7 +73,7 @@ The online documentation is located at <http://www.diamondsearch.org>. For the m
 About
 =====
 
-DIAMOND is developed by Benjamin Buchfink at the Detlef Weigel lab, Max
+DIAMOND is developed by Benjamin Buchfink at the Drost lab, Max
 Planck Institute for Developmental Biology, Tübingen, Germany.
 
 \[[Email](mailto:buchfink@gmail.com)\]
