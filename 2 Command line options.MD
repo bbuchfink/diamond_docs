@@ -111,13 +111,10 @@ the task to be run by the program.
 
 ## Alignment options
 
-  - `--sensitive`  
-      
-    This mode is a lot more sensitive that the default and generally
-    recommended for aligning longer sequences. The default mode is
-    mainly designed for short read alignment, i.e. finding significant
-    matches of \>50 bits on 30-40aa fragments.
-
+  - `--sensitive`
+  
+    This mode provides a lot higher sensitivity than the default (fast) mode.
+    
   - `--more-sensitive`  
       
     This mode provides some additional sensitivity compared to the
@@ -234,6 +231,9 @@ the task to be run by the program.
         
           - `qseq`
             Aligned part of query sequence
+            
+          - `full_qseq`
+            Full query sequence
         
           - `sseq`
             Aligned part of subject sequence
@@ -279,6 +279,9 @@ the task to be run by the program.
         
           - `btop`
             Blast traceback operations(BTOP)
+            
+          - `cigar`
+            CIGAR string
         
           - `staxids`
             Unique Subject Taxonomy ID(s), separated by a ’;’ (in
@@ -296,6 +299,15 @@ the task to be run by the program.
         
           - `qtitle`
             Query title
+            
+          - `qqual`
+            Query quality values for the aligned part of the query
+            
+          - `full_qqual`
+            Query quality values
+            
+          - `qstrand`
+            Query strand
         
         By default, there are 12 preconfigured fields: `qseqid sseqid
         pident length mismatch gapopen qstart qend sstart send evalue
