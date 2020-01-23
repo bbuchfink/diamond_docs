@@ -21,13 +21,12 @@ recommended to compile the software from source on the target system.
 A precompiled binary is available for recent Linux systems and may be
 downloaded for immediate use:
 
-    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.24/diamond-linux64.tar.gz
+    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.29/diamond-linux64.tar.gz
     tar xzf diamond-linux64.tar.gz
 
-The binary requires a fairly current CPU that supports POPCNT and SSSE3.
 If the binary does not work on your system, i.e. you are getting error
-messages like `Illegal instruction` or `Kernel too old`, please try
-another installation method or compile the software from source.
+messages like `Kernel too old`, please try another installation method
+or compile the software from source.
 
 ### Linux/macOS (via Bioconda)
 
@@ -48,7 +47,7 @@ To pull the latest version of the official Docker container:
 
 To pull a specific version:
 
-    docker pull buchfink/diamond:version0.9.22
+    docker pull buchfink/diamond:version0.9.29
 
 ### FreeBSD
 
@@ -56,9 +55,8 @@ On FreeBSD, you can use `pkg install diamond` to install the software.
 
 ### Windows
 
-A binary executable for Windows can be downloaded at the DIAMOND github
-page. You also need to install the [Visual C++
-Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145).
+A binary executable for Windows can be downloaded at the [GitHub Releases](https://github.com/bbuchfink/diamond/releases)
+page. You also need to install the [Visual C++ Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145).
 
 ## Compiling from source
 
@@ -66,9 +64,9 @@ Compilation requires GCC 4.8.1 or later, CMake 2.6 or later as well as
 `libpthread` and `zlib` including development headers. To compile DIAMOND
 from source, invoke the following commands on the shell:
 
-    wget http://github.com/bbuchfink/diamond/archive/v0.9.24.tar.gz
-    tar xzf v0.9.24.tar.gz
-    cd diamond-0.9.24
+    wget http://github.com/bbuchfink/diamond/archive/v0.9.29.tar.gz
+    tar xzf v0.9.29.tar.gz
+    cd diamond-0.9.29
     mkdir bin
     cd bin
     cmake ..
@@ -81,3 +79,4 @@ Note:
 
   - Use `cmake -DBUILD_STATIC=ON` to create a statically linked
     executable.
+  - Use `cmake -DCMAKE_BUILD_MARCH=native` to perform a native compile.
