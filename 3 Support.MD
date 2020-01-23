@@ -97,17 +97,4 @@ Community feedback and feature requests are also appreciated.
     
     Beyond that, no guarantees of consistency can be made. DIAMOND like
     all fast aligners uses numerous heuristics that can alter results in
-    unexpected ways. For example, it has been noted that the top hit of
-    a BLAST search can change depending on the `-max_target_seqs`
-    option. Because gapped extension is expensive, BLAST ranks all the
-    subject sequences that were hit for a query based on ungapped
-    extensions at seed hits and considers only a subset of the subjects
-    for gapped extension. The pool of subjects considered is bigger for
-    higher values of `-max_target_seqs`, so in rare cases the true best
-    hit may or may not make it to the gapped extension stage depending
-    on this parameter.
-    
-    Effects like this seem counterintuitive to many users, but they are
-    a natural byproduct of heuristics used by all fast aligners. The
-    only tools that can guarantee optimal results in any sense of the
-    word are rigorous search tools like SSEARCH.
+    unexpected ways.
