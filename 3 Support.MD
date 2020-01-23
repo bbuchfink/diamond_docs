@@ -1,7 +1,7 @@
 
 # Support & FAQ
 
-Support is provided at the [forums](index.php), by [email](mailto:buchfink@gmail.com) or the [GitHub
+Support is provided at the [forums](index.php?forums/), by [email](mailto:buchfink@gmail.com) or the [GitHub
 issues page](http://github.com/bbuchfink/diamond/issues/). For support
 requests it is usually helpful if you provide details about your data
 (size and type of sequences) and your execution environment (CPU cores,
