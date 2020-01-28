@@ -60,6 +60,13 @@ the task to be run by the program.
     is optional and needs to be supplied in order to provide taxonomy
     features. The file is contained within this archive downloadable at
     NCBI: <ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip>.
+    
+  - `--taxonnames <file>`
+    
+    Path to the `names.dmp` file from the NCBI taxonomy. This parameter
+    is optional and needs to be supplied in order to provide taxonomy
+    features. The file is contained within this archive downloadable at
+    NCBI: <ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip>.
 
 ## General options
 
@@ -287,6 +294,26 @@ the task to be run by the program.
             Unique Subject Taxonomy ID(s), separated by a ’;’ (in
             numerical order). This field requires setting the
             `--taxonmap` parameter for `makedb`.
+            
+          - `sscinames`
+            Unique Subject Scientific Name(s), separated by a ';'. This
+            field requires setting the `--taxonmap` and `--taxonnames`
+            parameters for `makedb`.
+          
+          - `sskingdoms`
+            Unique Subject Super Kingdom(s), separated by a ';'. This
+            field requires setting the `--taxonmap`, `--taxonnodes`
+            and `--taxonnames` parameters for `makedb`.
+            
+          - `skingdoms`
+            Unique Subject Kingdom(s), separated by a ';'. This
+            field requires setting the `--taxonmap`, `--taxonnodes`
+            and `--taxonnames` parameters for `makedb`.
+            
+          - `sphylums`
+            Unique Subject Phylums(s), separated by a ';'. This
+            field requires setting the `--taxonmap`, `--taxonnodes`
+            and `--taxonnames` parameters for `makedb`.
         
           - `stitle`
             Subject Title
@@ -514,4 +541,6 @@ that taxonomy features are currently not available for the DAA format.
     
 ---
 
-[1] Maria Hauser, Martin Steinegger, Johannes Söding; MMseqs software suite for fast and deep clustering and searching of large protein sequence sets, Bioinformatics, Volume 32, Issue 9, 1 May 2016, Pages 1323–1330
+[1] Maria Hauser, Martin Steinegger, Johannes Söding; MMseqs software suite
+for fast and deep clustering and searching of large protein sequence sets,
+Bioinformatics, Volume 32, Issue 9, 1 May 2016, Pages 1323–1330
