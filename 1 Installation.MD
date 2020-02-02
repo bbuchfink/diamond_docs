@@ -21,7 +21,7 @@ recommended to compile the software from source on the target system.
 A precompiled binary is available for recent Linux systems and may be
 downloaded for immediate use:
 
-    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.29/diamond-linux64.tar.gz
+    wget http://github.com/bbuchfink/diamond/releases/download/v0.9.30/diamond-linux64.tar.gz
     tar xzf diamond-linux64.tar.gz
 
 If the binary does not work on your system, i.e. you are getting error
@@ -47,7 +47,7 @@ To pull the latest version of the official Docker container:
 
 To pull a specific version:
 
-    docker pull buchfink/diamond:version0.9.29
+    docker pull buchfink/diamond:version0.9.30
 
 ### FreeBSD
 
@@ -64,9 +64,9 @@ Compilation requires GCC 4.8.1 or later, CMake 2.6 or later as well as
 `libpthread` and `zlib` including development headers. To compile DIAMOND
 from source, invoke the following commands on the shell:
 
-    wget http://github.com/bbuchfink/diamond/archive/v0.9.29.tar.gz
-    tar xzf v0.9.29.tar.gz
-    cd diamond-0.9.29
+    wget http://github.com/bbuchfink/diamond/archive/v0.9.30.tar.gz
+    tar xzf v0.9.30.tar.gz
+    cd diamond-0.9.30
     mkdir bin
     cd bin
     cmake ..
