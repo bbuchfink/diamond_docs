@@ -26,7 +26,7 @@ Quick start guide
 This demonstrates a quick example for setting up and using the program on Linux. Installing the software on your system may be done by downloading it in binary format for immediate use:
 
 ```
-wget http://github.com/bbuchfink/diamond/releases/download/v0.9.29/diamond-linux64.tar.gz
+wget http://github.com/bbuchfink/diamond/releases/download/v0.9.30/diamond-linux64.tar.gz
 tar xzf diamond-linux64.tar.gz
 ```
 
