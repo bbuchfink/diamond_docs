@@ -323,6 +323,9 @@ the task to be run by the program.
         
           - `qcovhsp`
             Query Coverage Per HSP
+            
+          - `scovhsp`
+            Subject Coverage Per HSP
         
           - `qtitle`
             Query title
