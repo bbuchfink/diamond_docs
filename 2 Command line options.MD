@@ -538,9 +538,15 @@ that taxonomy features are currently not available for the DAA format.
 
   - `--range-cover #`  
       
-    The percentage of a hit’s query range that needs to be spanned by
+    The minimum percentage of a hit's query range that needs to be spanned by
     higher scoring hits for a hit to be deleted in range culling mode
-    (default=50.0).
+    (default=`50.0`).
+    
+  - `--culling-overlap #`
+  
+    The minimum percentage of a hit's query or target range that needs to be
+    spanned by a higher scoring hit against the same target for a hit
+    to be deleted. (default=`50.0`)
     
 ---
 
