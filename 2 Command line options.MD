@@ -34,6 +34,13 @@ the task to be run by the program.
   - `help`  
       
     Print help message.
+    
+  - `test`
+  
+    Run a series of test cases and verify the hashes of the output files
+    against reference values. This command will exit with code `0` if all
+    tests have passed and `1` otherwise. Running this command requires write
+    access to the current working directory.
 
 ## Makedb options
 
