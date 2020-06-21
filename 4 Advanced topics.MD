@@ -54,3 +54,10 @@ export CXX=$HOME/GCC-4.8.5/bin/g++
 cmake -DSTATIC_LIBGCC=ON -DSTATIC_LIBSTDC++=ON ..
 make
 ```
+
+# Database format versions
+
+- v0.9.25 to v0.9.35 produce format version 3 and accept format version 2-3.
+- v0.9.19 to v0.9.24 produce and accept format version 2.
+- v0.9.0 to v0.9.18 produce and accept format version 1.
+- v0.8.12 to v0.8.38 produce and accept format version 0.
