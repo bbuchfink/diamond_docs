@@ -531,13 +531,24 @@ that taxonomy features are currently not available for the DAA format.
     During the seed search, seeds with very high frequency in the
     queries or the database are ignored. This option sets the number of
     standard deviations above the average frequency for ignoring a seed.
-    The default values are 50 in default mode, 10 in sensitive mode, and
-    200 in more-sensitive mode.
+    The default values are 50 in default mode, 20 in sensitive mode,
+    200 in more-sensitive mode, 15 in very-sensitive mode and 20 in
+    ultra-sensitive mode.
+    
+  - `--ext (banded-fast,banded-slow)`
+  
+    This option determines how band sizes are setup for banded Smith-Waterman
+    extension. The `banded-slow` setting is slightly slower but more accurate.
+    The defaults are `banded-fast` for the default and sensitive modes, and
+    `banded-slow` for the more-sensitive, very-sensitive and ultra-sensitive
+    modes.
 
   - `--band #`  
       
-    Dynamic programming band for seed extension. Initial seed hits are
-    scanned across a band of this length in both directions.
+    Set a fixed band size for banded Smith Waterman extension. Setting this
+    option overrides the preconfigured defaults set by the `--ext` option.
+    Note that the band size is first determined by chaining, while this
+    parameter provides an additional band margin in both directions.
 
   - `--xml-blord-format`  
       
