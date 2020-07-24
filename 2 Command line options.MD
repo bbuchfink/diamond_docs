@@ -416,8 +416,8 @@ the task to be run by the program.
   - `--max-target-seqs/-k #`  
       
     The maximum number of target sequences per query to report
-    alignments for (default=25). Setting this to 0 will report all
-    alignments that were found.
+    alignments for (default=25). Setting this to `-k0` will report all
+    targets for which alignments were found.
 
   - `--top #`  
       
@@ -426,6 +426,19 @@ the task to be run by the program.
     For example, setting this to 10 will report all alignments whose
     score is at most 10% lower than the best alignment score for a
     query.
+        
+  - `--max-hsps #`  
+      
+    The maximum number of HSPs (High-Scoring Segment Pairs) per target
+    sequence to report for each query. The default policy is to report
+    only the highest-scoring HSP for each target, while disregarding
+    alternative, lower-scoring HSPs that are contained in the same target.
+    **This is not to be confused with the `--max-target-seqs` option.**
+    
+    This parameter can be increased to report an alternative HSP if 
+    its query and subject ranges are not enveloped by a higher scoring
+    HSP and if it meets the e-value threshold. Setting this option to
+    `--max-hsps 0` will report all alternative HSPs.
 
   - `--range-culling`  
       
@@ -466,17 +479,6 @@ the task to be run by the program.
       
     Report only alignments above the given percentage of subject cover.
 
-  - `--max-hsps #`  
-      
-    The maximum number of HSPs per subject sequence to report for each
-    query. Note that in general any number of HSPs may exist for a
-    single query/subject pair. The program’s default policy is to report
-    any HSP if its query and subject ranges are not enveloped by a
-    higher scoring HSP and if it meets the e-value treshold.  
-    This option may be used to limit the number of HSPs reported.
-    Setting this option to 1 will cause only the single best HSP for
-    each query/subject pair to be reported.
-
   - `--unal (0,1)`  
       
     Report unaligned queries (0=no, 1=yes). By default, unaligned
@@ -493,9 +495,10 @@ the task to be run by the program.
       
     Block size in billions of sequence letters to be processed at a
     time. This is the main parameter for controlling the program’s
-    memory usage. Bigger numbers will increase the use of memory and
-    temporary disk space, but also improve performance. The program can
-    be expected to use roughly six times this number of memory (in GB).
+    memory and disk space usage. Bigger numbers will increase the use
+    of memory and temporary disk space, but also improve performance.
+    The program can be expected to use roughly six times this number
+    of memory (in GB).
     
     The default value is `-b2.0`. The parameter can be increased for
     better performance but values of >20 are not recommended.
