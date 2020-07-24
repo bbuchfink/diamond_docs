@@ -127,12 +127,23 @@ the task to be run by the program.
 
   - `--sensitive`
   
-    This mode provides a lot higher sensitivity than the default (fast) mode.
+    Enable sensitive mode designed for full sensitivity for hits >40% identity.
+    Without using this option, the default (fast) mode will run which is designed
+    for hits of >70% identity and short read aligment.
     
   - `--more-sensitive`  
       
-    This mode provides some additional sensitivity compared to the
-    sensitive mode.
+    This mode is slightly more sensitive than the `--sensitive` mode.
+    
+  - `--very-sensitive`
+  
+    Enable the very-sensitive mode designed for best sensitivity including the
+    twilight zone range of <40% identity.
+    
+  - `--ultra-sensitive`
+    
+    Enable the ultra-sensitive mode which is yet more sensitive than the
+    `--very-sensitive mode`.
 
   - `--frameshift/-F #`  
       
