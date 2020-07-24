@@ -496,28 +496,37 @@ the task to be run by the program.
     memory usage. Bigger numbers will increase the use of memory and
     temporary disk space, but also improve performance. The program can
     be expected to use roughly six times this number of memory (in GB).
-    So for the default value of `-b2.0`, the memory usage will be about
-    12 GB.
+    
+    The default value is `-b2.0`. The parameter can be increased for
+    better performance but values of >20 are not recommended.
+    
+    The very-sensitive and ultra-sensitive modes use `-b0.4` as a
+    default. Note that these two modes benefit only slightly
+    from increasing this parameter.
+    
+    Note that this parameter affects the algorithm and results will not
+    be completely identical for different values of the block size.
 
   - `--tmpdir/-t <directory>`  
       
     Directory to be used for temporary storage. This is set to the
     output directory by default. The amount of disk space that will be
-    used depends on the program’s settings and your data. As a general
-    rule you should ensure that 100 GB of disk space are available here.
-    If you run the program in a cluster environment, and disk space is
-    only available over a slow network based file system, you may want
-    to set the `--tmpdir` option to `/dev/shm`. This will keep temporary
-    information in memory and thus increase the program’s memory usage
-    substantially.
+    used depends on the program’s settings and the input data. As a general
+    rule it should be ensured that 100 GB of disk space are available here.
+    
+    If the program is being run in a cluster environment, and disk space is
+    mounted over a network based file system, it is recommended to set this
+    parameter to a fast local disk or to `/dev/shm` to avoid any I/O
+    bottlenecks.
 
   - `--index-chunks/-c #`  
       
-    The number of chunks for processing the seed index (default=4). This
-    option can be additionally used to tune the performance. It is
-    recommended to set this to 1 on a high memory server, which will
-    increase performance and memory usage, but not the usage of
-    temporary disk space.
+    The number of chunks for processing the seed index. This
+    option can be additionally used to tune the performance. The default
+    value is `-c4`, while setting this parameter to `-c1` instead will
+    improve the performance at the cost of increased memory use. Note
+    that the very-sensitive and ultra-sensitive modes use `-c1` by
+    default.
 
 ## View options
 
