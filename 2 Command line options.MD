@@ -127,9 +127,10 @@ the task to be run by the program.
 
   - `--sensitive`
   
-    Enable sensitive mode designed for full sensitivity for hits >40% identity.
-    Without using this option, the default (fast) mode will run which is designed
-    for hits of >70% identity and short read aligment.
+    Enable the sensitive mode designed for full sensitivity for hits >40% identity.
+    
+    Without using any sensitivity option, the default (fast) mode will run which
+    is designed for finding hits of >70% identity and short read alignment.
     
   - `--more-sensitive`  
       
@@ -441,21 +442,25 @@ the task to be run by the program.
     `--max-hsps 0` will report all alternative HSPs.
 
   - `--range-culling`  
-      
-    Restrict hit culling to overlapping query ranges. This feature is
+
+    Enable hit culling with respect to the query range. This featgure is
     designed for long query DNA sequences that may span several genes.
-    In these cases, the default of reporting the 25 best overall hits
-    could cause hits to a lower scoring gene to be overshadowed. But
-    just increasing the number of alignments reported will bloat the
-    output size and reduce performance.  
+    In these cases, reporting the overall top N hits can cause hits to
+    a lower-scoring gene to be superseded by a higher-scoring gene.
+    Using this option, hit culling will be performed locally with respect
+    to a hit's query range, thus reporting the locally top N hits while
+    allowing more hits that span a different region of the query.
+
     Using this feature along with `-k 25` (default), a hit will only be
     deleted if at least 50% of its query range is spanned by at least 25
-    higher or equal scoring hits.  
+    higher or equal scoring hits.
+    
     Using this feature along with `--top 10`, a hit will only be deleted
     if its score is more than 10% lower than that of a higher scoring
-    hit over at least 50% of its query range.  
-    The percentage is configurable using `--range-cover`. Note that this
-    feature is currently only available in frameshift alignment mode.
+    hit over at least 50% of its query range.
+    
+    The overlap percentage is configurable using `--range-cover`. Note that
+    this feature is currently only available in frameshift alignment mode.
 
   - `--evalue/-e #`  
       
