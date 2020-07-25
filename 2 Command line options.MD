@@ -144,7 +144,7 @@ the task to be run by the program.
   - `--ultra-sensitive`
     
     Enable the ultra-sensitive mode which is yet more sensitive than the
-    `--very-sensitive mode`.
+    `--very-sensitive` mode.
 
   - `--frameshift/-F #`  
       
