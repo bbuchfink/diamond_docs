@@ -42,9 +42,10 @@ Community feedback and feature requests are also appreciated.
     
     Due to the definition of HSPs, which are pairs of segments that form
     a linear alignment, any number of these may be contained in a single
-    query/subject pair. The program reports additional aligned domains
-    by default as they may contain valuable information. This behaviour
-    can be changed by using the `--max-hsps` option.
+    query/subject pair. Prior to version 2.0.0, the program reported
+    additional aligned domains by default as they may contain valuable
+    information. *Note that the default behaviour has changed since version
+    2.0.0*
 
 5.  **The program does not appear to be sensitive enough / it does not
     find an alignment I expect it to find or that another aligner
@@ -59,16 +60,13 @@ Community feedback and feature requests are also appreciated.
         identity matches. Also note that e-value computations are not
         compatible for different aligners most of the time.
     
-    2.  Low complexity masking and compositional bias correction may
+    2.  Repeat masking and compositional bias correction may
         cause hits to be filtered. This is usually desirable as these
         methods are highly effective in eliminating false positives.
-        Note that differences in false positive filtering can cause
-        substantial deviations in the output for different aligners used
-        on the same data.
+        Repeat masking can be disabled using `--masking 0` if required.
     
-    3.  Due to its seed configuration, the program is not able to align
-        sequences shorter than 12 or 10 amino acids, for the fast mode
-        and sensitive modes respectively.
+    3.  There are limitations in aligning very short sequences of length
+        <20, and this task requires some tuning of parameters.
     
     4.  Seeds that occur too frequently in the input are ignored, which
         may cause problems if your data is extremely repetitive. This
@@ -76,7 +74,7 @@ Community feedback and feature requests are also appreciated.
     
     5.  The program may not be sensitive enough for your application.
         You should try the more sensitive modes (options `--sensitive`
-        and `--more-sensitive`). Still, perfect results cannot be
+        up to `--ultra-sensitive`). Still, perfect results cannot be
         guaranteed by heuristical algorithms, but only by a rigorous
         Smith-Waterman computation.
 
@@ -94,7 +92,8 @@ Community feedback and feature requests are also appreciated.
     run on the same input with the same parameters will produce
     identical results, regardless of the hardware, operating system,
     compiler, or number of CPU threads. If this was not the case, I
-    would consider it a bug.
+    would consider it a bug. This is also ensured using the built-in
+    regression tests (`diamond test`).
     
     Beyond that, no guarantees of consistency can be made. DIAMOND like
     all fast aligners uses numerous heuristics that can affect results in
