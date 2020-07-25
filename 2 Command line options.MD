@@ -423,6 +423,10 @@ the task to be run by the program.
     The maximum number of target sequences per query to report
     alignments for (default=25). Setting this to `-k0` will report all
     targets for which alignments were found.
+    
+    *Note that this parameter does not only affect the reporting, but
+    also the algorithm as it is taken into account for heuristics that
+    eliminate hits prior to full gapped extension.*
 
   - `--top #`  
       
@@ -431,6 +435,10 @@ the task to be run by the program.
     For example, setting this to 10 will report all alignments whose
     score is at most 10% lower than the best alignment score for a
     query.
+    
+    *Note that this parameter does not only affect the reporting, but
+    also the algorithm as it is taken into account for heuristics that
+    eliminate hits prior to full gapped extension.*
         
   - `--max-hsps #`  
       
