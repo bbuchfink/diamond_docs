@@ -243,26 +243,26 @@ the task to be run by the program.
           - `slen`
             Subject sequence length
         
-          - `qstart`*
-            Start of alignment in query
+          - `qstart`
+            Start of alignment in query*
         
-          - `qend`*
-            End of alignment in query
+          - `qend`
+            End of alignment in query*
         
-          - `sstart`*
-            Start of alignment in subject
+          - `sstart`
+            Start of alignment in subject*
         
-          - `send`*
-            End of alignment in subject
+          - `send`
+            End of alignment in subject*
         
           - `qseq`
-            Aligned part of query sequence
+            Aligned part of query sequence*
             
           - `full_qseq`
             Full query sequence
         
           - `sseq`
-            Aligned part of subject sequence
+            Aligned part of subject sequence*
         
           - `full_sseq`
             Full subject sequence
@@ -277,37 +277,37 @@ the task to be run by the program.
             Raw score
         
           - `length`
-            Alignment length
+            Alignment length*
         
           - `pident`
-            Percentage of identical matches
+            Percentage of identical matches*
         
           - `nident`
-            Number of identical matches
+            Number of identical matches*
         
           - `mismatch`
-            Number of mismatches
+            Number of mismatches*
         
           - `positive`
-            Number of positive - scoring matches
+            Number of positive - scoring matches*
         
           - `gapopen`
-            Number of gap openings
+            Number of gap openings*
         
           - `gaps`
-            Total number of gaps
+            Total number of gaps*
         
           - `ppos`
-            Percentage of positive - scoring matches
+            Percentage of positive - scoring matches*
         
           - `qframe`
             Query frame
         
           - `btop`
-            Blast traceback operations(BTOP)
+            Blast traceback operations(BTOP)*
             
           - `cigar`
-            CIGAR string
+            CIGAR string*
         
           - `staxids`
             Unique Subject Taxonomy ID(s), separated by a ’;’ (in
@@ -341,16 +341,16 @@ the task to be run by the program.
             All Subject Title(s), separated by a ’\<\>’
         
           - `qcovhsp`
-            Query Coverage Per HSP
+            Query Coverage Per HSP*
             
           - `scovhsp`
-            Subject Coverage Per HSP
+            Subject Coverage Per HSP*
         
           - `qtitle`
             Query title
             
           - `qqual`
-            Query quality values for the aligned part of the query
+            Query quality values for the aligned part of the query*
             
           - `full_qqual`
             Query quality values
@@ -361,6 +361,10 @@ the task to be run by the program.
         By default, there are 12 preconfigured fields: `qseqid sseqid
         pident length mismatch gapopen qstart qend sstart send evalue
         bitscore`.
+        
+        * These fields require alignment traceback. If none of these fields
+        are selected, traceback computation will be disabled, which improves
+        performance and reduces use of temporary disk space.
     
       - `100`  
         DIAMOND alignment archive (DAA). The DAA format is a proprietary
