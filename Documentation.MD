@@ -55,7 +55,7 @@ The output file here is specified with the `–o` option and named
 
 - **Repeat masking is applied to the query and reference
   sequences by default**. To disable it, use `--masking 0`.
-- **DIAMOND is optimized for large input files** of >1 million proteins.
+- **DIAMOND is optimized for large input files of >1 million proteins.**
   Naturally the tool can be used for smaller files as well, but the
   algorithm will not reach its full efficiency and runtime comparisons
   to other tools will not be meaningful.
