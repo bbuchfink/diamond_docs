@@ -37,8 +37,8 @@ the task to be run by the program.
     
   - `test`
   
-    Run a series of test cases and verify the hashes of the output files
-    against reference values. This command will exit with code `0` if all
+    Run a series of test cases and verify the output against reference
+    hashes. This command will exit with code `0` if all
     tests have passed and `1` otherwise. Running this command requires write
     access to the current working directory.
 
@@ -243,16 +243,16 @@ the task to be run by the program.
           - `slen`
             Subject sequence length
         
-          - `qstart`
+          - `qstart`*
             Start of alignment in query
         
-          - `qend`
+          - `qend`*
             End of alignment in query
         
-          - `sstart`
+          - `sstart`*
             Start of alignment in subject
         
-          - `send`
+          - `send`*
             End of alignment in subject
         
           - `qseq`
@@ -443,7 +443,7 @@ the task to be run by the program.
 
   - `--range-culling`  
 
-    Enable hit culling with respect to the query range. This featgure is
+    Enable hit culling with respect to the query range. This feature is
     designed for long query DNA sequences that may span several genes.
     In these cases, reporting the overall top N hits can cause hits to
     a lower-scoring gene to be superseded by a higher-scoring gene.
