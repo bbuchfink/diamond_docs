@@ -362,7 +362,7 @@ the task to be run by the program.
         pident length mismatch gapopen qstart qend sstart send evalue
         bitscore`.
         
-        * These fields require alignment traceback. If none of these fields
+        *These fields require alignment traceback. If none of these fields
         are selected, traceback computation will be disabled, which improves
         performance and reduces use of temporary disk space.
     
