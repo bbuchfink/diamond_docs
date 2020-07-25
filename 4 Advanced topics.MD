@@ -1,8 +1,8 @@
 # Optimizing performance
 
-You should take the time to configure the program to your needs instead
-of just running it with default settings, as this will substantially
-optimize the use of system resources. Some points to consider:
+Substantial gains in performance can be achieved by configuring the tool
+according to the needs of a given application instead of simply running
+it with with default settings. Some points to consider:
 
   - Set the `-e` parameter (maximum expected value) as low as possible.
 
@@ -24,6 +24,9 @@ optimize the use of system resources. Some points to consider:
 
   - Use the option `--compress 1` to automatically generate
     gzip-compressed output files.
+    
+  - Set the block size (`-b`) and index chunks (`-c`) parameters according
+    to the available resources on your system.
     
 # Compiling with custom GCC
 
