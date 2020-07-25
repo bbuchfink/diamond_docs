@@ -26,7 +26,7 @@ Quick start guide
 This demonstrates a quick example for setting up and using the program on Linux. Installing the software on your system may be done by downloading it in binary format for immediate use:
 
 ```
-wget http://github.com/bbuchfink/diamond/releases/download/v0.9.36/diamond-linux64.tar.gz
+wget http://github.com/bbuchfink/diamond/releases/download/v2.0.0/diamond-linux64.tar.gz
 tar xzf diamond-linux64.tar.gz
 ```
 
@@ -53,17 +53,18 @@ The output file here is specified with the `–o` option and named
 
 **Note**:
 
--   The program may use quite a lot of memory and also temporary
-    disk space. Should the program fail due to running out of either
-    one, you need to set a lower value for the [block size parameter](index.php?pages/command_line_options/#memory-performance-options)
-    `-b`.
--   You can adjust the sensitivity using the options `--sensitive` or
-    `--more-sensitive`.
--   The runtime of the program is not linear in the size of the
-    query file and it is much more efficient for large query files
-    (\> 1 million sequences) than for smaller ones.
--   Repeat masking is applied to the query and reference
-    sequences by default. Masked residues appear in the output as `X`.
+- **Repeat masking is applied to the query and reference
+  sequences by default**. To disable it, use `--masking 0`.
+- **DIAMOND is optimized for large input files** of >1 million proteins.
+  Naturally the tool can be used for smaller files as well, but the
+  algorithm will not reach its full efficiency and runtime comparisons
+  to other tools will not be meaningful.
+- The program may use quite a lot of memory and also temporary
+  disk space. Should the program fail due to running out of either
+  one, you need to set a lower value for the [block size parameter](index.php?pages/command_line_options/#memory-performance-options)
+  `-b`.
+- You can adjust the sensitivity using the options `--sensitive`, 
+  `--more-sensitive`, `--very-sensitive` and `--ultra-sensitive`.
     
 Documentation
 =============
@@ -79,6 +80,7 @@ Planck Institute for Developmental Biology, Tübingen, Germany.
 \[[Email](mailto:buchfink@gmail.com)\]
 \[[Twitter](https://twitter.com/bbuchfink)\] \[[Google
 Scholar](https://scholar.google.de/citations?user=kjPIF1cAAAAJ)\]
+\[[Drost lab](https://drostlab.com/)\]
 \[[MPI-EBIO](http://eb.tuebingen.mpg.de/)\]
 
 Publication:
