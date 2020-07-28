@@ -14,6 +14,9 @@ Compiled binaries are available for download for Linux, macOS (via
 Bioconda), FreeBSD (via `pkg`) and Windows. For best performance, it is
 recommended to compile the software from source on the target system.
 
+The software has been tested on Ubuntu 18.04 bionic, Ubuntu 14.04 trusty,
+CentOS 7, macOS 10.13 and Microsoft Windows 10.
+
 ## Binary download
 
 ### Linux
@@ -74,6 +77,7 @@ from source, invoke the following commands on the shell:
 
 Note:
 
+  - The typical time for compilation is 3-4 minutes using one core.
   - Use ` cmake -DCMAKE_INSTALL_PREFIX=...  ` to install to a different
     prefix.
   - Use `cmake -DCMAKE_BUILD_MARCH=native` to perform a native compile.
