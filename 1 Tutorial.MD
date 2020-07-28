@@ -1,3 +1,5 @@
+# Tutorial
+
 We will demonstrate an example run of DIAMOND on a small dataset here. For this
 we assume the tool has been installed according to the installation instructions.
 
