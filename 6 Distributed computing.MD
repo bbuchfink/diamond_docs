@@ -34,7 +34,7 @@ chunking and thereby the number of work packages is controlled via the
 The actual parallel run should be done using the parameter `--multiprocessing` as follows:
 
 ```bash
-./diamond blastp --db DATABASE.dmnd --query QUERY.fasta --multiprocessing --tmpdir $TMPDIR --parallel-tmpdir $PTMPDIR
+./diamond blastp --db DATABASE.dmnd --query QUERY.fasta -o OUTPUT_FILE --multiprocessing --tmpdir $TMPDIR --parallel-tmpdir $PTMPDIR
 ```
 
 Note that `$PTMPDIR` must refer to the same location as used during the
