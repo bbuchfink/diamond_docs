@@ -19,6 +19,7 @@ Keep posted about new developments by following me on
 [![Build Status](https://travis-ci.org/bbuchfink/diamond.svg?branch=master)](https://travis-ci.org/bbuchfink/diamond)
 [![image](https://anaconda.org/bioconda/diamond/badges/version.svg)](https://anaconda.org/bioconda/diamond)
 [![image](https://anaconda.org/bioconda/diamond/badges/downloads.svg)](https://anaconda.org/bioconda/diamond)
+![image](https://img.shields.io/badge/license-GPL-blueviolet)
 
 Quick start guide
 =================
