@@ -610,6 +610,13 @@ that taxonomy features are currently not available for the DAA format.
     spanned by a higher scoring hit against the same target for a hit
     to be deleted. (default=`50.0`)
     
+  - `--bin #`
+  
+    The number of bins for storing seed hits. Higher numbers will lead to the
+    creation of more temporary files, reduce memory usage of the extension
+    stage, but also slightly reduce efficiency. The default value is 16,
+    except for the ultra-sensitive mode which uses `--bin 64` by default.
+    
 ---
 
 [1] Maria Hauser, Martin Steinegger, Johannes Söding; MMseqs software suite
