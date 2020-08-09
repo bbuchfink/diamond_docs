@@ -59,7 +59,7 @@ the task to be run by the program.
     Path to mapping file that maps NCBI protein accession numbers to
     taxon ids (gzip compressed). This parameter is optional and needs to
     be supplied in order to provide taxonomy features. The file can be
-    downloaded from NCBI: [prot.accession2taxid.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz).
+    downloaded from NCBI: <ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz>.
     
     A custom file following the same format may be supplied here. Note
     that the first line of this file is assumed to contain headings and
