@@ -60,6 +60,10 @@ the task to be run by the program.
     taxon ids (gzip compressed). This parameter is optional and needs to
     be supplied in order to provide taxonomy features. The file can be
     downloaded from NCBI: <ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz>.
+    
+    A custom file following the same format may be supplied here. Note
+    that the first line of this file is assumed to contain headings and
+    will be ignored.
 
   - `--taxonnodes <file>`  
       
