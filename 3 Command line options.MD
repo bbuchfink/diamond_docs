@@ -85,6 +85,19 @@ the task to be run by the program.
       
     Number of CPU threads. By default, the program will auto-detect and
     use all available virtual cores on the machine.
+    
+  - `--quiet`
+  
+    Disable all terminal output.
+    
+  - `--verbose/-v`
+  
+    Enable more verbose terminal output.
+    
+  - `--log`
+  
+    Enable even more verbose terminal output, which is also written to
+    a file named `diamond.log` is the current working directory.
 
 ## Input options
 
