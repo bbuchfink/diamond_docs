@@ -158,10 +158,14 @@ the task to be run by the program.
     Enable the very-sensitive mode designed for best sensitivity including the
     twilight zone range of <40% identity.
     
+    **Available since version 2.0.0.**
+    
   - `--ultra-sensitive`
     
     Enable the ultra-sensitive mode which is yet more sensitive than the
     `--very-sensitive` mode.
+    
+    **Available since version 2.0.0.**
 
   - `--frameshift/-F #`  
       
