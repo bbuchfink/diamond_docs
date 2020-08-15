@@ -67,13 +67,15 @@ Compilation requires GCC 4.8.1 or later, CMake 2.6 or later as well as
 `libpthread` and `zlib` including development headers. To compile DIAMOND
 from source, invoke the following commands on the shell:
 
-    wget http://github.com/bbuchfink/diamond/archive/v2.0.2.tar.gz
-    tar xzf v2.0.2.tar.gz
-    cd diamond-2.0.2
-    mkdir bin
-    cd bin
-    cmake ..
-    make install
+```bash
+wget http://github.com/bbuchfink/diamond/archive/v2.0.2.tar.gz
+tar xzf v2.0.2.tar.gz
+cd diamond-2.0.2
+mkdir bin
+cd bin
+cmake ..
+make install
+```
 
 Note:
 
