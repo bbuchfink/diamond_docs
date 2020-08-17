@@ -391,7 +391,8 @@ the task to be run by the program.
         DIAMOND alignment archive (DAA). The DAA format is a proprietary
         binary format that can subsequently be used to generate other
         output formats using the `view` command. It is also supported by
-        MEGAN and allows a quick import of results.
+        MEGAN and allows a quick import of results. *Note that this format
+        cannot be written to a stream output like stdout.*
     
       - `101`  
         SAM format.
