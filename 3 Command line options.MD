@@ -538,8 +538,9 @@ the task to be run by the program.
     The program can be expected to use roughly six times this number
     of memory (in GB).
     
-    The default value is `-b2.0`. The parameter can be increased for
-    better performance but values of >20 are not recommended.
+    The default value is `-b2.0`. The parameter can be decreased for
+    reducing memory use, as well as increased for better performance
+    (values of >20 are not recommended).
     
     The very-sensitive and ultra-sensitive modes use `-b0.4` as a
     default. Note that these two modes benefit only slightly
