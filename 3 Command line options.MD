@@ -175,7 +175,7 @@ the task to be run by the program.
     recommended for long, error-prone sequences like MinION reads.  
     In the pairwise output format, frameshifts will be indicated by `\`
     and `/` for a shift by +1 and -1 nucleotide in the direction of
-    translation respectively.  
+    translation respectively.
     Note that this feature is disabled by default.
 
   - `--gapopen #`  
@@ -509,14 +509,20 @@ the task to be run by the program.
       
     Report only alignments above the given percentage of sequence
     identity.
+    
+    *Note that using this option reduces performance.*
 
   - `--query-cover #`  
       
     Report only alignments above the given percentage of query cover.
+    
+    *Note that using this option reduces performance.*
 
   - `--subject-cover #`  
       
     Report only alignments above the given percentage of subject cover.
+    
+    *Note that using this option reduces performance.*
 
   - `--unal (0,1)`  
       
