@@ -454,7 +454,7 @@ the task to be run by the program.
       
     Report alignments within the given percentage range of the top
     alignment score for a query (overrides `--max-target-seqs` option).
-    For example, setting this to 10 will report all alignments whose
+    For example, setting `--top 10` will report all alignments whose
     score is at most 10% lower than the best alignment score for a
     query.
     
