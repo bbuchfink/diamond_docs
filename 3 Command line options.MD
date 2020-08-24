@@ -618,6 +618,30 @@ that taxonomy features are currently not available for the DAA format.
     option overrides the preconfigured defaults set by the `--ext` option.
     Note that the band size is first determined by chaining, while this
     parameter provides an additional band margin in both directions.
+    
+  - `--no-ranking`
+  
+    Disable ranking heuristic. Ranking refers to establishing a tentative order
+    on the target sequences that were hit with respect to a single query. This
+    order is determined by ungapped extension scores at seed hits. The aligner
+    will compute gapped Smith-Waterman extensions for chunks of targets (see
+    `--ext-chunk-size`) according to the ranking order until no alignment
+    was found for the current chunk that meets the user-specified reporting
+    criteria.
+    
+    Setting this option disables the ranking heuristic, causing gapped
+    extensions to be computed for all seed hits.
+    
+    *Option supported since v2.0.3.*
+    
+  - `--ext-chunk-size #`
+  
+    The chunk size of target sequences used by the ranking heuristic (see
+    above). Higher numbers improve the accuracy of the algorithm. The default
+    is the number specified by the `-k` option, rounded up to the next multiple
+    of 32. When using `--top`, the default value is 32.
+  
+    *Option supported since v2.0.3.*
 
   - `--xml-blord-format`  
       
