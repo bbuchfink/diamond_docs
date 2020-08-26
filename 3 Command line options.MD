@@ -638,8 +638,9 @@ that taxonomy features are currently not available for the DAA format.
   
     The chunk size of target sequences used by the ranking heuristic (see
     above). Higher numbers improve the accuracy of the algorithm. The default
-    is the number specified by the `-k` option, rounded up to the next multiple
-    of 32. When using `--top`, the default value is 32.
+    is the number specified by the `--max-target-seqs/-k` option, rounded up
+    to the next multiple of 32, with a minimum of 128 and a maximum of 400.
+    When using `--top`, the default value is 128.
   
     *Option supported since v2.0.3.*
 
