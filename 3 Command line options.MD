@@ -533,6 +533,8 @@ the task to be run by the program.
   - `--no-self-hits`  
       
     Suppress reporting of identical self-hits between sequences.
+    The FASTA sequence identifier as well as the sequence of
+    query and target need to be identical for a hit to be deleted.
 
 ## Memory & performance options
 
