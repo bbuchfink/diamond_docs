@@ -204,12 +204,19 @@ the task to be run by the program.
     | PAM70    | (6-8)/2; (9-11)/1                            | 10/1                  |
     | PAM30    | (5-7)/2; (8-10)/1                            | 9/1                   |
     
-
+  - `--masking (0,1)
+  
+    DIAMOND by default applies the tantan repeat masking algorithm to the
+    query and target sequences as described in [1]. This masking procedure
+    increases the specificity of alignments and serves to filter out
+    spurious hits. If this is not desired, repeat masking can be disabled
+    using `--masking 0`.
+  
   - `--comp-based-stats (0,1)`  
       
     Compositional bias correction of alignment scores. 0 means no score
     correction, 1 means compositional bias correction as described in 
-    [1]. Compositionally biased sequences often cause false
+    [2]. Compositionally biased sequences often cause false
     positive matches, which are effectively filtered by this algorithm
     in a way similar to the composition based statistics used by BLAST .
 
@@ -671,6 +678,10 @@ that taxonomy features are currently not available for the DAA format.
     
 ---
 
-[1] Maria Hauser, Martin Steinegger, Johannes Söding; MMseqs software suite
+[1] Martin C. Frith; A new repeat-masking method enables specific detection
+of homologous sequences, Nucleic Acids Research, Volume 39, Issue 4, 1 March
+2011, Page e23, <https://doi.org/10.1093/nar/gkq1212>
+
+[2] Maria Hauser, Martin Steinegger, Johannes Söding; MMseqs software suite
 for fast and deep clustering and searching of large protein sequence sets,
 Bioinformatics, Volume 32, Issue 9, 1 May 2016, Pages 1323–1330
