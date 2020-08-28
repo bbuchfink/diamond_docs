@@ -83,3 +83,10 @@ Note:
   - Use ` cmake -DCMAKE_INSTALL_PREFIX=...  ` to install to a different
     prefix.
   - Use `cmake -DCMAKE_BUILD_MARCH=native` to perform a native compile.
+  - By default, a portable binary will be created that contains separate
+    code paths for systems that support SSE4.1, AVX2, or neither. Be
+    aware that more recent versions of GCC may use AVX2 instructions
+    even for generic builds. In these cases, you need to use
+    `-DCMAKE_BUILD_MARCH=nocona` for a binary compatible with host CPUs
+    supporting only SSE3, and `-DCMAKE_BUILD_MARCH=nehalem` for compatibility
+    with host CPUs supporting SSE4.2.
