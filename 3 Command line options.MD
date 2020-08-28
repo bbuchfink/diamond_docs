@@ -204,7 +204,7 @@ the task to be run by the program.
     | PAM70    | (6-8)/2; (9-11)/1                            | 10/1                  |
     | PAM30    | (5-7)/2; (8-10)/1                            | 9/1                   |
     
-  - `--masking (0,1)
+  - `--masking (0,1)`
   
     DIAMOND by default applies the tantan repeat masking algorithm to the
     query and target sequences as described in [1]. This masking procedure
@@ -630,7 +630,8 @@ that taxonomy features are currently not available for the DAA format.
     
   - `--no-ranking`
   
-    Disable ranking heuristic. Ranking refers to establishing a tentative order
+    Disable ranking heuristic. Ranking refers to a heuristic that eliminates
+    hits prior to full gapped extension. It works by establishing a tentative order
     on the target sequences that were hit with respect to a single query. This
     order is determined by ungapped extension scores at seed hits. The aligner
     will compute gapped Smith-Waterman extensions for chunks of targets (see
