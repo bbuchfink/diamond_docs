@@ -142,12 +142,17 @@ the task to be run by the program.
 
 ## Alignment options
 
+  - `--mid-sensitive`
+  
+    Enable the mid-sensitive mode which is between the default (fast) mode
+    and the sensitive mode in sensitivity.
+  
+    Without using any sensitivity option, the default (fast) mode will run which
+    is designed for finding hits of >70% identity and short read alignment.
+
   - `--sensitive`
   
     Enable the sensitive mode designed for full sensitivity for hits >40% identity.
-    
-    Without using any sensitivity option, the default (fast) mode will run which
-    is designed for finding hits of >70% identity and short read alignment.
     
   - `--more-sensitive`  
       
