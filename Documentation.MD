@@ -65,8 +65,9 @@ The output file here is specified with the `–o` option and named
   disk space. Should the program fail due to running out of either
   one, you need to set a lower value for the [block size parameter](index.php?pages/command_line_options/#memory-performance-options)
   `-b`.
-- You can adjust the sensitivity using the options `--sensitive`, 
-  `--more-sensitive`, `--very-sensitive` and `--ultra-sensitive`.
+- You can adjust the sensitivity using the options `--mid-sensitive`,
+  `--sensitive`, `--more-sensitive`, `--very-sensitive` and
+  `--ultra-sensitive`.
     
 Documentation
 =============
