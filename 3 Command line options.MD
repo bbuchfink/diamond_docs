@@ -145,7 +145,7 @@ the task to be run by the program.
   - `--mid-sensitive`
   
     Enable the mid-sensitive mode which is between the default (fast) mode
-    and the sensitive mode in sensitivity.
+    and the sensitive mode in sensitivity. *Option supported since v2.0.3*
   
     Without using any sensitivity option, the default (fast) mode will run which
     is designed for finding hits of >70% identity and short read alignment.
