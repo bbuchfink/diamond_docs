@@ -74,7 +74,8 @@ cd diamond-2.0.3
 mkdir bin
 cd bin
 cmake ..
-make install
+make -j4
+sudo make install
 ```
 
 Note:
