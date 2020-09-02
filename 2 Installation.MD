@@ -4,7 +4,7 @@ DIAMOND compiles as generic C++ code and has no particular requirements
 on the hardware architecture, but it makes use of the SSE instruction
 set of the Intel/AMD x86-64 platform if available and will run
 considerably faster on that platform. It runs on POSIX-compatible
-operating systems (Linux, FreeBSD, OS X) as well as on Microsoft
+operating systems (Linux, FreeBSD, macOS) as well as on Microsoft
 Windows.
 
 A high-memory server is recommended for better performance, but the
@@ -12,7 +12,8 @@ program can be run on standard desktop computers or laptops.
 
 Compiled binaries are available for download for Linux, macOS (via
 Bioconda), FreeBSD (via `pkg`) and Windows. For best performance, it is
-recommended to compile the software from source on the target system.
+recommended to natively compile the software from source on the target
+system.
 
 The software has been tested on Ubuntu 18.04 bionic, Ubuntu 14.04 trusty,
 CentOS 7, macOS 10.13 and Microsoft Windows 10.
